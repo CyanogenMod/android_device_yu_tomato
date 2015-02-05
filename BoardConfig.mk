@@ -157,6 +157,9 @@ BOARD_SEPOLICY_UNION += \
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard1
+
 # QC PROPRIETARY
 ifneq ($(QCPATH),)
 BOARD_USES_QCNE := true
