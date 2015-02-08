@@ -15,3 +15,10 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/full_tomato.mk
+    $(LOCAL_DIR)/a510.mk \
+	$(LOCAL_DIR)/amami.mk \
+	$(LOCAL_DIR)/anzu.mk \
+	+ $(LOCAL_DIR)/apexqtmo.mk \
+	$(LOCAL_DIR)/bacon.mk \
+	$(LOCAL_DIR)/coconut.mk \
+	$(LOCAL_DIR)/d2lte.mk \
