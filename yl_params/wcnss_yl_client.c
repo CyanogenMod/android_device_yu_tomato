@@ -38,19 +38,15 @@
 #define WCNSS_INVALID_MAC_PREFIX "080000"
 #endif
 
-int wcnss_init_qmi(void)
+static int yl_get_wlan_address(unsigned char *buf, size_t len)
 {
-    /* empty */
-    return SUCCESS;
-}
+    int rc;
 
-int wcnss_qmi_get_wlan_address(unsigned char *pBdAddr)
-{
-    int rc, i;
-    char buf[6];
-    struct stat statbuf;
-    FILE *genmac;
-    int prefixlen = strnlen(WCNSS_INVALID_MAC_PREFIX, 8) / 2;
+    memset(buf, 0, len);
+
+    if (len < 6) {
+        return FAILED;
+    }
 
     rc = yl_params_init();
     if (rc) {
@@ -63,6 +59,25 @@ int wcnss_qmi_get_wlan_address(unsigned char *pBdAddr)
         ALOGE("%s: Failed to retrieve MAC from yl_params: %d\n", __func__, rc);
         return FAILED;
     }
+
+    return SUCCESS;
+}
+
+int wcnss_init_qmi(void)
+{
+    /* empty */
+    return SUCCESS;
+}
+
+int wcnss_qmi_get_wlan_address(unsigned char *pBdAddr)
+{
+    int i;
+    unsigned char buf[6];
+    struct stat statbuf;
+    FILE *genmac;
+    int prefixlen = strnlen(WCNSS_INVALID_MAC_PREFIX, 8) / 2;
+
+    yl_get_wlan_address(buf, 6);
 
     memcpy(pBdAddr, buf, 6);
 
