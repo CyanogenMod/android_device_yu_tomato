@@ -31,6 +31,9 @@
 
 #define YL_PARAM_BLK_SZ 512
 
+#define INIT_MAX_RETRY 5
+#define INIT_RETRY_INTERVAL_SEC 1
+
 enum yl_params_index {
     YL_DEVICE = 0,
     YL_CONFIGURATION,
@@ -156,6 +159,43 @@ struct yl_params_t {
 
 static struct yl_params_t yl_params;
 
+static int
+yl_wait_ready(void)
+{
+    uint8_t buf[YL_PARAM_BLK_SZ];
+    int i, fd, rc;
+
+    fd = open(YL_PARAMS_PATH, O_RDONLY);
+    if (fd < 0) {
+        rc = -errno;
+        ALOGE("%s:%d: Failed to open %s: %d\n",
+                __func__, __LINE__, YL_PARAMS_PATH, rc);
+        goto wait_ret;
+    }
+
+    memset(buf, 0, YL_PARAM_BLK_SZ);
+    memcpy(buf, yl_params_map[YL_DEVICE], strlen(yl_params_map[YL_DEVICE]));
+    for (i = 0; i < INIT_MAX_RETRY + 1; i++) {
+        /* Attempt a read as a proxy for determining whether MMC is available */
+        rc = read(fd, buf, YL_PARAM_BLK_SZ);
+        if (rc > 0) {
+            ALOGI("%s:%d: yl_params block device ready\n", __func__, __LINE__);
+            rc = 0;
+            break;
+        } else {
+            rc = -errno;
+            ALOGW("%s:%d: Failed to read: %d, retrying\n", __func__, __LINE__, rc);
+            if (i < INIT_MAX_RETRY) {
+                sleep(INIT_RETRY_INTERVAL_SEC);
+            }
+        }
+    }
+
+    close(fd);
+wait_ret:
+    return rc;
+}
+
 int
 yl_get_param(int param, void *buf, size_t len)
 {
@@ -204,6 +244,17 @@ yl_params_init(void)
     uint8_t buf[YL_PARAM_BLK_SZ];
     int rc;
     int fd;
+
+    if (yl_params.initialized) {
+        return 0;
+    }
+
+    rc = yl_wait_ready();
+    if (rc) {
+        ALOGE("%s:%d: yl_params block device failed to become ready: %d\n",
+                __func__, __LINE__, rc);
+        return rc;
+    }
 
     fd = open(YL_PARAMS_PATH, O_RDONLY);
     if (fd < 0) {
