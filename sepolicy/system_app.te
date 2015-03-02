@@ -1,3 +1,5 @@
+allow system_app sensors_device:chr_file rw_file_perms;
+
 # for Settings' access to TapToWake and KeyDisabler
 allow system_app touchpanel_sysfs:file rw_file_perms;
 allow system_app touchpanel_sysfs:dir { search };
