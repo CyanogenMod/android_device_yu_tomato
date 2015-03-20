@@ -42,13 +42,7 @@ public class ColorEnhancement {
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() {
-        File f = new File("/dev/color_enhancement");
-
-        if(f.exists()) {
-            return true;
-        } else {
-            return false;
-        }
+        return false;
     }
 
     /**
