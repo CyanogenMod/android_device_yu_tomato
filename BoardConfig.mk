@@ -85,15 +85,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    bluetooth_loader.te \
-    file.te \
-    file_contexts \
-    system_app.te \
-    system_server.te \
-    system.te \
-    wcnss_service.te
-
 # Wifi
 TARGET_PROVIDES_WCNSS_QMI := true
 TARGET_USES_QCOM_WCNSS_QMI := true
