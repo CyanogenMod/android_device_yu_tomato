@@ -1,6 +1,6 @@
 [
   {
-    "repository": "android_device_venture_msm8939-common",
-    "target_path": "device/venture/msm8939-common"
+    "repository": "android_device_cm_msm8939-common",
+    "target_path": "device/cm/msm8939-common"
   }
 ]
