@@ -28,8 +28,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml
 
 # Screen density
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_CONFIG := normal hdpi xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Due to multi-density builds, these are set by init
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model ro.sf.lcd_density
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
