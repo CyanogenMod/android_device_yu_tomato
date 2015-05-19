@@ -135,6 +135,9 @@ TARGET_NO_RPC := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_tomato
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
