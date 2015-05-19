@@ -43,6 +43,9 @@ BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw/src
 TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
 TARGET_NO_RPC := true
 
+# init
+TARGET_INIT_VENDOR_LIB := libinit_tomato
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
