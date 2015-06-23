@@ -39,6 +39,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # CMHW
 BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw/src
 
+# Smoosh all the things
+TARGET_TRANSPARENT_COMPRESSION_METHOD ?= lz4
+
 # Dexopt
 ifeq ($(HOST_OS),linux)
   ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -47,7 +50,9 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+ifeq ($(TARGET_TRANSPARENT_COMPRESSION_METHOD),)
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
+endif
 
 # GPS
 TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
