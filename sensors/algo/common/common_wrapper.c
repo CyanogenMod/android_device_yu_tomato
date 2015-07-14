@@ -28,6 +28,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------*/
 
 #include <stdio.h>
+#include <string.h>
 #include <CalibrationModule.h>
 #include <sensors.h>
 
