@@ -379,6 +379,10 @@ int mm_app_stream_initbuf(cam_frame_len_offset_t *frame_offset_info,
         }
         return -1;
     }
+    if (stream->num_of_bufs > MM_CAMERA_MAX_NUM_FRAMES) {
+        CDBG_ERROR("%s: more stream buffers per stream than allowed", __func__);
+        return -1;
+    }
 
     rc = mm_app_alloc_bufs(&stream->s_bufs[0],
                            frame_offset_info,

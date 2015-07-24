@@ -965,7 +965,7 @@ void CameraContext::dataCallbackTimestamp(nsecs_t timestamp,
         mInterpr->mViVBuff.YScanLines = srcYScanLines;
         mInterpr->mViVBuff.UVScanLines = srcUVScanLines;
 
-        memcpy( mInterpr->mViVBuff.buff, (void *) dataPtr->pointer(),
+        memcpy( mInterpr->mViVBuff.buff, dstBuff,
             mInterpr->mViVBuff.buffSize);
 
         mInterpr->mViVVid.isBuffValid = true;
