@@ -32,8 +32,16 @@ on boot
     chown system system /sys/devices/virtual/touchscreen/touchscreen_dev/calibrate
 
     # Torch
-    chown system camera /sys/class/leds/torch-light/brightness
-    chmod 0660 /sys/class/leds/torch-light/brightness
+    chown system camera /sys/class/leds/torch-light0/brightness
+    chmod 0660 /sys/class/leds/torch-light0/brightness
+
+    # Notification LED
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/red/led_time
+    chown system system /sys/class/leds/green/led_time
+    chown system system /sys/class/leds/blue/led_time
 
     # Touchscreen
     chown root system /sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl
