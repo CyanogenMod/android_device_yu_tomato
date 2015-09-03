@@ -28,6 +28,7 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
@@ -50,7 +51,7 @@ static void import_cmdline(char *name, int for_emulator)
     }
 }
 
-void vendor_load_properties()
+void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char density[5];
     import_kernel_cmdline(0, import_cmdline);
