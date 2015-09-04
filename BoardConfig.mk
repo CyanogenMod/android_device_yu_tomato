@@ -61,7 +61,7 @@ TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
 TARGET_NO_RPC := true
 
 # init
-TARGET_LIBINIT_DEFINES_FILE := device/yu/tomato/init/init_tomato.c
+TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_tomato.c
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
