@@ -26,6 +26,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <malloc.h>
 #include <pthread.h>
 #include <math.h>
 
