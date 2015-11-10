@@ -122,7 +122,6 @@ vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
-bin/location-mq
 etc/permissions/com.qualcomm.location.xml
 -lib64/libloc_api_v02.so
 -lib64/libloc_ds_api.so
