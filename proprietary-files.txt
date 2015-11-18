@@ -17,7 +17,7 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 vendor/lib/libFlacSwDec.so
--vendor/lib/libqct_resampler.so
+-vendor/lib64/libqct_resampler.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
@@ -198,7 +198,7 @@ etc/firmware/a420_pm4.fw
 # Media
 vendor/lib/libDivxDrm.so
 vendor/lib/libExtendedExtractor.so
--vendor/lib/libHevcSwDecoder.so
+-vendor/lib64/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal.so
 vendor/lib/libmmparser.so
