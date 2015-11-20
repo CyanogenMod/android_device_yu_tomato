@@ -187,7 +187,7 @@ vendor/lib/libOmxQcelp13Dec.so
 
 # Perf
 bin/msm_irqbalance
-bin/perfd
+vendor/bin/perfd
 vendor/lib64/libqti-perfd-client.so
 
 # Postprocessing
@@ -252,7 +252,7 @@ vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxml.so
 
 # Thermal
-bin/thermal-engine
+vendor/bin/thermal-engine
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 vendor/lib/libthermalclient.so
