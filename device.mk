@@ -74,9 +74,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.usb.id.ums_adb=9015 \
     ro.usb.vid=05c6
 
-# GPS
+# GPS/RIL
 PRODUCT_PACKAGES += \
-    gps.msm8916
+    gps.msm8916 \
+    libstlport
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
