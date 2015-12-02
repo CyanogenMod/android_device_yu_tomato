@@ -19,6 +19,8 @@ DEVICE_PATH := device/yu/tomato
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+USE_CLANG_PLATFORM_BUILD := true
+
 # Assertions
 TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 
