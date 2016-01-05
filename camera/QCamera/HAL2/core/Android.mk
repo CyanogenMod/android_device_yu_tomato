@@ -73,7 +73,7 @@ LOCAL_SHARED_LIBRARIES+= libgenlock libbinder libcamera_metadata
 LOCAL_CFLAGS += -include bionic/libc/include/sys/socket.h
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-LOCAL_MODULE:= camera.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE:= camera.msm8916
 LOCAL_32_BIT_ONLY := true
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)

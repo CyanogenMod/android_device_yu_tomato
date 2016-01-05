@@ -59,7 +59,7 @@ LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface
 
 LOCAL_MODULE_RELATIVE_PATH    := hw
-LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := camera.msm8916
 LOCAL_32_BIT_ONLY := true
 LOCAL_MODULE_TAGS := optional
 
