@@ -61,7 +61,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916 \
-    libmm-qcamera
+    libmm-qcamera \
+    Snap
 
 # Charger
 ADDITIONAL_DEFAULT_PROPERTIES += \
