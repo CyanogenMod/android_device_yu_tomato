@@ -245,7 +245,6 @@ etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
-lib64/librmnetctl.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libmdmdetect.so
