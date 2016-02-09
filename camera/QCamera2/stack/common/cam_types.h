@@ -31,6 +31,8 @@
 #define __QCAMERA_TYPES_H__
 
 #include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 #include <pthread.h>
 #include <inttypes.h>
 #include <media/msmb_camera.h>
