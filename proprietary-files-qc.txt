@@ -127,10 +127,12 @@ vendor/lib/mediadrm/libwvdrmengine.so
 -lib/libloc_api_v02.so
 -lib/libloc_ds_api.so
 vendor/lib64/hw/flp.default.so
+vendor/lib64/libflp.so
 vendor/lib64/libgeofence.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 vendor/lib/hw/flp.default.so
+vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
