@@ -38,6 +38,7 @@ vendor/lib/libmmcamera2_imglib_modules.so
 vendor/lib/libmmcamera2_isp_modules.so
 vendor/lib/libmmcamera2_is.so
 vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
