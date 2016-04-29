@@ -62,6 +62,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_tomato.cpp
 
 # Lights
+BOARD_LIGHTS_VARIANT := aw2013
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Partitions
