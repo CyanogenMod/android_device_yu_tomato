@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2014 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Gesture shortcuts -->
+    <string name="touchscreen_camera_gesture_title">Camera</string>
+    <string name="touchscreen_camera_gesture_summary">Draw a \'C\' to activate camera</string>
+    <string name="touchscreen_flashlight_gesture_title">Flashlight</string>
+    <string name="touchscreen_flashlight_gesture_summary">Draw a circle to toggle flashlight</string>
+    <string name="touchscreen_music_gesture_title">Music</string>
+    <string name="touchscreen_music_gesture_summary">Use gestures to control music playback \n
+    • Swipe down to play/pause\n
+    • Swipe left for previous track\n
+    • Swipe right for next track</string>
+</resources>
