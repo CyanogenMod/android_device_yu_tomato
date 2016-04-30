@@ -72,8 +72,20 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_set(PROP_LCDDENSITY, density);
     if (display_density == 480) {
         property_set("ro.product.model", "YU5510");
+        property_set("dalvik.vm.heapstartsize", "16m");
+        property_set("dalvik.vm.heapgrowthlimit", "192m");
+        property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heaptargetutilization", "0.75");
+        property_set("dalvik.vm.heapminfree", "2m");
+        property_set("dalvik.vm.heapminfree", "8m");
     } else {
         property_set("ro.product.model", "AO5510");
+        property_set("dalvik.vm.heapstartsize", "8m");
+        property_set("dalvik.vm.heapgrowthlimit", "192m");
+        property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heaptargetutilization", "0.75");
+        property_set("dalvik.vm.heapminfree", "512k");
+        property_set("dalvik.vm.heapminfree", "8m");
     }
 }
 
