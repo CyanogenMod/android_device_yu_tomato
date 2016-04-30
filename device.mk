@@ -75,6 +75,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.usb.id.ums_adb=9015 \
     ro.usb.vid=05c6
 
+# Gestures
+PRODUCT_PACKAGES += \
+    ConfigPanel \
+    com.cyanogenmod.keyhandler
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
