@@ -72,8 +72,37 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_set(PROP_LCDDENSITY, density);
     if (display_density == 480) {
         property_set("ro.product.model", "YU5510");
+
+        // Dalvik
+        property_set("dalvik.vm.heapstartsize", "16m");
+        property_set("dalvik.vm.heapgrowthlimit", "192m");
+        property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heaptargetutilization", "0.75");
+        property_set("dalvik.vm.heapminfree", "2m");
+        property_set("dalvik.vm.heapminfree", "8m");
     } else {
         property_set("ro.product.model", "AO5510");
+
+        // Dalvik
+        property_set("dalvik.vm.heapstartsize", "8m");
+        property_set("dalvik.vm.heapgrowthlimit", "192m");
+        property_set("dalvik.vm.heapsize", "512m");
+        property_set("dalvik.vm.heaptargetutilization", "0.75");
+        property_set("dalvik.vm.heapminfree", "512k");
+        property_set("dalvik.vm.heapminfree", "8m");
+
+        // HWUI
+        property_set("ro.hwui.texture_cache_size", "72");
+        property_set("ro.hwui.layer_cache_size", "48");
+        property_set("ro.hwui.r_buffer_cache_size", "8");
+        property_set("ro.hwui.path_cache_size", "32");
+        property_set("ro.hwui.gradient_cache_size", "1");
+        property_set("ro.hwui.drop_shadow_cache_size", "6");
+        property_set("ro.hwui.texture_cache_flushrate", "0.4");
+        property_set("ro.hwui.text_small_cache_width", "1024");
+        property_set("ro.hwui.text_small_cache_height", "1024");
+        property_set("ro.hwui.text_large_cache_width", "2048");
+        property_set("ro.hwui.text_large_cache_height", "1024");
     }
 }
 
