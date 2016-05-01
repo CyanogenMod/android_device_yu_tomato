@@ -15,9 +15,7 @@
 #
 
 # Inherit from those products. Most specific first.
-ifneq ($(TOMATO_32_BIT),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-endif
 
 TARGET_LOCALES := en_US en_IN en_GB hi_IN mr_IN ml_IN ta_IN kn_IN te_IN
 
