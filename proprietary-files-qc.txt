@@ -200,7 +200,6 @@ etc/firmware/a420_pm4.fw
 
 # Media
 vendor/lib/libI420colorconvert.so
-vendor/lib/libmmosal.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
