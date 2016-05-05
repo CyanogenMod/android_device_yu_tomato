@@ -35,7 +35,7 @@
 #include "log.h"
 #include "util.h"
 
-#include "init_msm.h"
+#include "init_msm8916.h"
 
 static int display_density = 320;
 
@@ -48,22 +48,18 @@ static void import_cmdline(char *name, int for_emulator)
     *value++ = 0;
     if (name_len == 0) return;
 
-    if (!strcmp(name,"panel.xres") && !strcmp(value,"1080")) {
+    if (!strcmp(name, "panel.xres") && !strcmp(value, "1080")) {
         display_density = 480;
     }
 }
 
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
+void init_target_properties()
 {
     char device[PROP_VALUE_MAX];
     int rc;
 
-    UNUSED(msm_id);
-    UNUSED(msm_ver);
-    UNUSED(board_type);
-
     rc = property_get("ro.cm.device", device);
-    if (!rc || !ISMATCH(device, "tomato"))
+    if (!rc || strncmp(device, "tomato", PROP_VALUE_MAX))
         return;
 
     char density[5];
@@ -88,4 +84,3 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("dalvik.vm.heapminfree", "8m");
     }
 }
-

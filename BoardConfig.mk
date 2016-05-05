@@ -58,8 +58,8 @@ endif
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
-# init
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_tomato.cpp
+# Init
+TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(DEVICE_PATH)/init/init_tomato.cpp
 
 # Lights
 BOARD_LIGHTS_VARIANT := aw2013
