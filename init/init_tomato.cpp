@@ -35,8 +35,6 @@
 #include "log.h"
 #include "util.h"
 
-#include "init_msm.h"
-
 static int display_density = 320;
 
 static void import_cmdline(char *name, int for_emulator)
@@ -48,19 +46,15 @@ static void import_cmdline(char *name, int for_emulator)
     *value++ = 0;
     if (name_len == 0) return;
 
-    if (!strcmp(name,"panel.xres") && !strcmp(value,"1080")) {
+    if (!strcmp(name, "panel.xres") && !strcmp(value, "1080")) {
         display_density = 480;
     }
 }
 
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
+void vendor_load_properties()
 {
     char device[PROP_VALUE_MAX];
     int rc;
-
-    UNUSED(msm_id);
-    UNUSED(msm_ver);
-    UNUSED(board_type);
 
     rc = property_get("ro.cm.device", device);
     if (!rc || !ISMATCH(device, "tomato"))
@@ -76,4 +70,3 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "AO5510");
     }
 }
-
