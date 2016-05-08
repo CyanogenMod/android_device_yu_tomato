@@ -18,9 +18,9 @@ LOCAL_SRC_FILES :=	\
         Gyroscope.cpp           \
         InputEventReader.cpp    \
         CalibrationManager.cpp  \
-		TomatoSensors.cpp       \
-		NativeSensorManager.cpp \
-		VirtualSensor.cpp 
+	TomatoSensors.cpp       \
+	NativeSensorManager.cpp \
+	VirtualSensor.cpp 
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libutils
 
