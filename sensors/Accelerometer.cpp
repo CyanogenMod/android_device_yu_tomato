@@ -41,9 +41,9 @@
 #define CONVERT_ACCEL_Z		-ACCEL_CONVERT
 
 #define ACCEL_SENSOR_NAME	"mpu6880"
-#define ACCEL_SYSFS_PATH	"/sys/class/input/input1/"
+#define ACCEL_SYSFS_PATH	"/sys/class/input/input0/"
 #define ACCEL_ENABLE		"accel_enable"
-#define ACCEL_DELAY			"accel_delay"
+#define ACCEL_DELAY		"accel_delay"
 
 #define SMOOTHING_FACTOR    0.8
 
