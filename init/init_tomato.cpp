@@ -65,7 +65,7 @@ void init_target_properties()
     char density[5];
     import_kernel_cmdline(0, import_cmdline);
     snprintf(density, sizeof(density), "%d", display_density);
-    property_set(PROP_LCDDENSITY, density);
+    property_set("ro.sf.lcd_density", density);
     if (display_density == 480) {
         property_set("ro.product.model", "YU5510");
         property_set("dalvik.vm.heapstartsize", "16m");
