@@ -37,6 +37,8 @@
 
 #include "init_msm8916.h"
 
+#define PROP_LCDDENSITY "ro.sf.lcd_density"
+
 static int display_density = 320;
 
 static void import_cmdline(char *name, int for_emulator)
