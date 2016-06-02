@@ -5,6 +5,4 @@
 /dev/yl_alsprox_sensor                          u:object_r:sensors_device:s0
 /dev/yl_params1                                 u:object_r:ylparams_device:s0
 
-/persist/.genmac                                u:object_r:wifi_data_file:s0
-
 /system/bin/yl_btmac                            u:object_r:bluetooth_loader_exec:s0
