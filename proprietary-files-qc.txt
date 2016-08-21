@@ -98,6 +98,9 @@ vendor/lib/libchromatix_ov5648_qtech_liveshot.so
 vendor/lib/libchromatix_ov5648_qtech_preview.so
 vendor/lib/libchromatix_ov5648_qtech_snapshot.so
 
+# Camera eeprom
+vendor/lib/libmmcamera_sunny_imx214_eeprom.so
+
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
@@ -108,7 +111,6 @@ etc/firmware/cpp_firmware_v1_4_0.fw
 vendor/lib/libmmcamera_imx135_cp8675.so
 vendor/lib/libmmcamera_imx214_cp8675.so
 vendor/lib/libmmcamera_ov5648_cp8675.so
-vendor/lib/libmmcamera_sunny_imx214_eeprom.so
 
 # CNE/DPM
 bin/cnd
@@ -271,7 +273,7 @@ vendor/lib64/libqti-perfd-client.so
 # Postprocessing
 bin/mm-pp-daemon
 vendor/lib64/libdisp-aba.so
--vendor/lib64/libmm-abl.so
+vendor/lib64/libmm-abl.so
 vendor/lib64/libmm-abl-oem.so
 
 # Qualcomm framework
@@ -310,7 +312,6 @@ vendor/lib/libqmi.so
 vendor/lib/libsmemlog.so
 
 # Radio
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
@@ -321,9 +322,10 @@ etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/lib64/libconfigdb.so
-vendor/lib64/libmdmdetect.so
 vendor/lib64/liblqe.so
+vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libril-qc-qmi-1.so
@@ -343,6 +345,6 @@ vendor/lib/libthermalclient.so
 -app/TimeService/TimeService.apk
 bin/time_daemon
 -vendor/lib64/libtime_genoff.so
--vendor/lib/libtime_genoff.so
 vendor/lib64/libTimeService.so
+-vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
