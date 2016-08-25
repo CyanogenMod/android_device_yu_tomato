@@ -312,6 +312,7 @@ vendor/lib/libqmi.so
 vendor/lib/libsmemlog.so
 
 # Radio
+-app/QtiTelephonyService/QtiTelephonyService.apk
 -app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
@@ -320,8 +321,12 @@ bin/rfs_access
 bin/rmt_storage
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
+etc/permissions/qti_telephony_common.xml
+etc/permissions/telephonyservice.xml
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
+framework/QtiTelephonyServicelibrary.jar
+framework/qti-telephony-common.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
