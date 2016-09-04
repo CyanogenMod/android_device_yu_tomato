@@ -29,9 +29,10 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
+#include <cutils/properties.h>
 #include "vendor_init.h"
-#include "property_service.h"
 #include "log.h"
 #include "util.h"
 
@@ -58,14 +59,14 @@ void init_target_properties()
     char device[PROP_VALUE_MAX];
     int rc;
 
-    rc = property_get("ro.cm.device", device);
+    rc = property_get("ro.cm.device", device, NULL);
     if (!rc || strncmp(device, "tomato", PROP_VALUE_MAX))
         return;
 
     char density[5];
     import_kernel_cmdline(0, import_cmdline);
     snprintf(density, sizeof(density), "%d", display_density);
-    property_set("ro.sf.lcd_density", density);
+    property_set("ro.sf.lcd_density", density, NULL);
     if (display_density == 480) {
         property_set("ro.product.model", "YU5510");
         property_set("dalvik.vm.heapstartsize", "16m");
