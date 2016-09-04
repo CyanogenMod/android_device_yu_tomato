@@ -55,11 +55,10 @@ static void import_cmdline(char *name, int for_emulator)
 
 void init_target_properties()
 {
-    char device[PROP_VALUE_MAX];
-    int rc;
+    std::string device;
 
-    rc = property_get("ro.cm.device", device);
-    if (!rc || strncmp(device, "tomato", PROP_VALUE_MAX))
+    device = property_get("ro.cm.device");
+    if (device != "tomato")
         return;
 
     char density[5];
