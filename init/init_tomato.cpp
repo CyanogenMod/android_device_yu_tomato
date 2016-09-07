@@ -39,16 +39,12 @@
 
 static int display_density = 320;
 
-static void import_cmdline(char *name, int for_emulator)
+static void import_cmdline(const std::string& key,
+        const std::string& value, bool for_emulator __attribute__((unused)))
 {
-    char *value = strchr(name, '=');
-    int name_len = strlen(name);
+    if (key.empty()) return;
 
-    if (value == 0) return;
-    *value++ = 0;
-    if (name_len == 0) return;
-
-    if (!strcmp(name, "panel.xres") && !strcmp(value, "1080")) {
+    if (key == "panel.xres" && value == "1080") {
         display_density = 480;
     }
 }
