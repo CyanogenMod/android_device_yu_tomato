@@ -17,26 +17,30 @@
 package com.cyanogenmod.settings.device;
 
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceActivity;
-import android.preference.ListPreference;
-import android.preference.SwitchPreference;
+import android.support.v14.preference.PreferenceFragment;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.Preference;
+import android.support.v7.ListPreference;
+import android.support.v7.SwitchPreference;
 import android.view.MenuItem;
 
 import cyanogenmod.providers.CMSettings;
 import com.cyanogenmod.settings.device.utils.Constants;
 
-public class TouchscreenGestureSettings extends PreferenceActivity
+public class TouchscreenGestureSettings extends PreferenceFragment
         implements OnPreferenceChangeListener {
     private static final String KEY_HAPTIC_FEEDBACK = "touchscreen_gesture_haptic_feedback";
 
     private SwitchPreference mHapticFeedback;
 
+    private Context mContext;
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.touchscreen_panel);
+
+        mContext = getContext();
+
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         mHapticFeedback = (SwitchPreference) findPreference(KEY_HAPTIC_FEEDBACK);
@@ -44,13 +48,13 @@ public class TouchscreenGestureSettings extends PreferenceActivity
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
 
         // Remove the padding around the listview
         getListView().setPadding(0, 0, 0, 0);
 
-        mHapticFeedback.setChecked(CMSettings.System.getInt(getContentResolver(),
+        mHapticFeedback.setChecked(CMSettings.System.getInt(mContext.getContentResolver(),
                 CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0);
     }
 
@@ -59,7 +63,7 @@ public class TouchscreenGestureSettings extends PreferenceActivity
         final String key = preference.getKey();
         if (KEY_HAPTIC_FEEDBACK.equals(key)) {
             final boolean value = (Boolean) newValue;
-            CMSettings.System.putInt(getContentResolver(),
+            CMSettings.System.putInt(mContext.getContentResolver(),
                     CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, value ? 1 : 0);
             return true;
         }
