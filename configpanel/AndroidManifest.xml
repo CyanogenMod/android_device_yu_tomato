@@ -29,8 +29,8 @@
 
         <activity
             android:label="@*cyanogenmod.platform:string/screen_gestures_panel_title"
-            android:name=".TouchscreenGestureSettings"
-            android:theme="@style/Theme.Main" >
+            android:name=".ConfigPanelActivity"
+            android:theme="@style/ConfigPanelStyle" >
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
