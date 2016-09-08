@@ -22,8 +22,7 @@ import org.cyanogenmod.internal.util.FileUtils;
  * Glove mode / high touch sensitivity
  */
 public class HighTouchSensitivity {
-    private static final String FILE_MODE =
-            "/sys/class/touchscreen/touchscreen_dev/mode";
+    private static final String FILE_MODE = "/sys/class/touchscreen/touchscreen_dev/mode";
 
     /**
      * Whether device supports high touch sensitivity.
@@ -35,13 +34,10 @@ public class HighTouchSensitivity {
                 FileUtils.isFileWritable(FILE_MODE);
     }
 
-    /**
-     * This method returns the current activation status of high
-     * touch sensitivity
+    /** This method returns the current activation status of high touch sensitivity
      *
-     * @return boolean Must be false if high touch sensitivity is not supported
-     * or not activated, or the operation failed while reading the status;
-     * true in any other case.
+     * @return boolean Must be false if high touch sensitivity is not supported or not activated,
+     * or the operation failed while reading the status; true in any other case.
      */
     public static boolean isEnabled() {
         return "glove".equals(FileUtils.readOneLine(FILE_MODE));
@@ -51,8 +47,8 @@ public class HighTouchSensitivity {
      * This method allows to setup high touch sensitivity status.
      *
      * @param state The new high touch sensitivity status
-     * @return boolean Must be false if high touch sensitivity is not supported
-     * or the operation failed; true in any other case.
+     * @return boolean Must be false if high touch sensitivity is not supported or the operation
+     * failed; true in any other case.
      */
     public static boolean setEnabled(boolean state) {
         return FileUtils.writeLine(FILE_MODE, state ? "glove" : "normal");
