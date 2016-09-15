@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2015, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -711,6 +711,16 @@ typedef union
 
     const qmiLocGdtDownloadEndStatusReqMsgT_v02* pGdtDownloadEndStatusReq;
     /* QMI_LOC_GDT_DOWNLOAD_END_STATUS_REQ_V02*/
+	
+    const qmiLocDeleteGNSSServiceDataReqMsgT_v02* pDeleteGNSSServiceDataReq;
+    /* QMI_LOC_DELETE_GNSS_SERVICE_DATA_REQ_V02*/
+
+    // XTRA Client 2.0
+    const qmiLocInjectXtraDataReqMsgT_v02 *pInjectXtraDataReq;
+    /*QMI_LOC_INJECT_XTRA_DATA_REQ_V02*/
+
+    const qmiLocInjectXtraPcidReqMsgT_v02 *pInjectXtraPcidReq;
+    /*QMI_LOC_INJECT_XTRA_PCID_REQ_V02*/
 }locClientReqUnionType;
 
 
@@ -1413,6 +1423,9 @@ typedef union
 
     const qmiLocGdtDownloadEndStatusIndMsgT_v02 *pGdtDownloadEndStatusInd;
     /*QMI_LOC_GDT_DOWNLOAD_END_STATUS_IND_V02*/
+	
+	const qmiLocDeleteGNSSServiceDataIndMsgT_v02 *pDeleteGNSSServiceDataInd;
+	/* QMI_LOC_DELETE_GNSS_SERVICE_DATA_REQ_V02*/
 }locClientRespIndUnionType;
 
 /** @} */ /* end_addtogroup data_types */
@@ -1492,6 +1505,7 @@ typedef void  (*locClientRespIndCbType)(
       locClientHandleType handle,
       uint32_t respIndId,
       const locClientRespIndUnionType respIndPayload,
+      uint32_t respIndPayloadSize,
       void *pClientCookie
 );
 
