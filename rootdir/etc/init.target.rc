@@ -42,8 +42,7 @@ on boot
     # Touchscreen
     chown system system /sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl
     chmod 0660 /sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl
-    chown system system /sys/devices/virtual/touchscreen/touchscreen_dev/mode
-    chmod 0660 /sys/devices/virtual/touchscreen/touchscreen_dev/mode
+
     chown root system /sys/devices/soc.0/78b9000.i2c/i2c-5/5-005d/keypad_enable
     chmod 0660 /sys/devices/soc.0/78b9000.i2c/i2c-5/5-005d/keypad_enable
 
