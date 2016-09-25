@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Kamera</string>
+  <string name="touchscreen_camera_gesture_summary">\"C\" zeichnen, um die Kamera zu starten</string>
+  <string name="touchscreen_flashlight_gesture_title">Taschenlampe</string>
+  <string name="touchscreen_flashlight_gesture_summary">Kreis zeichnen, um die Taschenlampe ein-/auszuschalten</string>
+  <string name="touchscreen_music_gesture_title">Musik</string>
+  <string name="touchscreen_music_gesture_summary">Musikwiedergabe mithilfe von Gesten steuern \n
+• Nach unten wischen: Play/Pause\n
+• Nach links wischen: Vorheriger Titel\n
+• Nach rechts wischen: Nächster Titel</string>
 </resources>

@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Φωτογραφ. μηχανή</string>
+  <string name="touchscreen_camera_gesture_summary">Σχεδιάστε ένα \'C\' για εκκίνηση της φωτογρ. μηχανής</string>
+  <string name="touchscreen_flashlight_gesture_title">Φακός</string>
+  <string name="touchscreen_flashlight_gesture_summary">Σχεδιάστε έναν κύκλο για ενεργοποίηση του φακού</string>
+  <string name="touchscreen_music_gesture_title">Μουσική</string>
+  <string name="touchscreen_music_gesture_summary">Χρήση χειρονομιών για τον έλεγχο αναπαραγωγής μουσικής \n
+    • Σύρετε προς τα κάτω για αναπαραγωγή/παύση\n
+    • Σύρετε προς τα αριστερά για προηγούμενο κομμάτι\n
+    • Σύρετε προς τα δεξιά για επόμενο κομμάτι</string>
 </resources>

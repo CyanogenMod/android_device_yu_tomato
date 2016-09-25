@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">מצלמה</string>
+  <string name="touchscreen_camera_gesture_summary">צייר \"C\" כדי להפעיל את המצלמה</string>
+  <string name="touchscreen_flashlight_gesture_title">פנס</string>
+  <string name="touchscreen_flashlight_gesture_summary">צייר עיגול כדי להפעיל את הפנס</string>
+  <string name="touchscreen_music_gesture_title">מוסיקה</string>
+  <string name="touchscreen_music_gesture_summary">השתמש במחוות כדי לשלוט בהשמעת המוזיקה\n
+    • החלקה למטה להפעלה\השהייה\n
+    • החלקה שמאלה לחזרה לרצועה הקודמת\n
+    • החלקה ימינה למעבר לרצועה הבאה</string>
 </resources>

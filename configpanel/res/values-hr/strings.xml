@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Fotoaparat</string>
+  <string name="touchscreen_camera_gesture_summary">Nacrtajte \'C\' da biste aktivirali Fotoaparat</string>
+  <string name="touchscreen_flashlight_gesture_title">Bljeskalica</string>
+  <string name="touchscreen_flashlight_gesture_summary">Nacrtajte krug za upravljanje svjetiljkom</string>
+  <string name="touchscreen_music_gesture_title">Glazba</string>
+  <string name="touchscreen_music_gesture_summary">Koristi geste za kontrolu glazbe \n
+    • Kliznite dolje za sviranje/pauzu\n
+    • Kliznite lijevo za prethodnu pjesmu\n
+    • Kliznite desno za sljedeću pjesmu</string>
 </resources>
