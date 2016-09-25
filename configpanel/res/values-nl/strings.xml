@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Camera</string>
+  <string name="touchscreen_camera_gesture_summary">Teken een \"C\" om camera te openen</string>
+  <string name="touchscreen_flashlight_gesture_title">Zaklamp</string>
+  <string name="touchscreen_flashlight_gesture_summary">Teken een cirkel om zaklamp aan/uit te zetten</string>
+  <string name="touchscreen_music_gesture_title">Muziek</string>
+  <string name="touchscreen_music_gesture_summary">Gebaren gebruiken om muziek te bedienen\n
+    • Veeg omlaag voor afspelen/pauzeren\n
+    • Veeg naar links voor vorig nummer\n
+    • Veeg naar rechts voor volgend nummer</string>
 </resources>

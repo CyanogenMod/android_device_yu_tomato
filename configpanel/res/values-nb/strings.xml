@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Kamera</string>
+  <string name="touchscreen_camera_gesture_summary">Tegn en \"C\" for å aktivere kameraet</string>
+  <string name="touchscreen_flashlight_gesture_title">Lommelykt</string>
+  <string name="touchscreen_flashlight_gesture_summary">Tegn en sirkel for å slå lommelykt av/på</string>
+  <string name="touchscreen_music_gesture_title">Musikk</string>
+  <string name="touchscreen_music_gesture_summary">Bruk bevegelser for å kontrollere musikkavspilling \n
+    • sveip ned for å spille/pause\n
+    • sveip venstre for forrige sang\n
+    • Sveip høyre for neste sang</string>
 </resources>

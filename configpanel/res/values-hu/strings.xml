@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Kamera</string>
+  <string name="touchscreen_camera_gesture_summary">Rajzoljon egy \"C\" betűt a kamera aktiválásához</string>
+  <string name="touchscreen_flashlight_gesture_title">Zseblámpa</string>
+  <string name="touchscreen_flashlight_gesture_summary">Rajzoljon egy kört a zseblámpához</string>
+  <string name="touchscreen_music_gesture_title">Zene</string>
+  <string name="touchscreen_music_gesture_summary">Használjon kézmozdulatokat a lejátszó vezérléséhez \n
+    • Csúsztassa lefelé a lejátszáshoz/szüneteltetéshez\n
+    • Csúsztassa balra az előző számra ugráshoz\n
+    • Csúsztassa jobbra a következő számra ugráshoz</string>
 </resources>

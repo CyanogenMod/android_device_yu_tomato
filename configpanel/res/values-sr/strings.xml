@@ -17,4 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Камера</string>
+  <string name="touchscreen_camera_gesture_summary">Нацртај \"C\" да би активирао камеру</string>
+  <string name="touchscreen_flashlight_gesture_title">Лампа</string>
+  <string name="touchscreen_music_gesture_title">Музика</string>
 </resources>
