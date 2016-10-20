@@ -43,6 +43,7 @@
 #include <LocApiV02.h>
 #include <loc_api_v02_log.h>
 #include <loc_api_sync_req.h>
+#include <loc_api_v02_client.h>
 #include <loc_util_log.h>
 #include <gps_extended.h>
 #include "platform_lib_includes.h"
@@ -110,12 +111,12 @@ static void globalEventCb(locClientHandleType clientHandle,
 static void globalRespCb(locClientHandleType clientHandle,
                          uint32_t respId,
                          const locClientRespIndUnionType respPayload,
+                         uint32_t respPayloadSize,
                          void*  pClientCookie)
 {
   MODEM_LOG_CALLFLOW(%s, loc_get_v02_event_name(respId));
   LocApiV02 *locApiV02Instance =
         (LocApiV02 *)pClientCookie;
-
 
   LOC_LOGV ("%s:%d] client = %p, resp id = %d, client cookie ptr = %p\n",
                   __func__,  __LINE__,  clientHandle, respId, pClientCookie);
@@ -126,10 +127,11 @@ static void globalRespCb(locClientHandleType clientHandle,
                   __func__,  __LINE__,  clientHandle, respId);
     return;
   }
-    // process the sync call
-    // use pDeleteAssistDataInd as a dummy pointer
+
+  // process the sync call
+  // use pDeleteAssistDataInd as a dummy pointer
   loc_sync_process_ind(clientHandle, respId,
-                       (void *)respPayload.pDeleteAssistDataInd);
+          (void *)respPayload.pDeleteAssistDataInd, respPayloadSize);
 }
 
 /* global error callback, it will call the handle service down
@@ -169,6 +171,7 @@ LocApiV02 :: LocApiV02(const MsgTask* msgTask,
     clientHandle(LOC_CLIENT_INVALID_HANDLE_VALUE),
     dsClientIface(NULL),
     dsClientHandle(NULL),
+    dsLibraryHandle(NULL),
     mGnssMeasurementSupported(sup_unknown),
     mQmiMask(0), mInSession(false), mEngineOn(false)
 {
@@ -2898,6 +2901,16 @@ int LocApiV02 :: initDataServiceClient()
     }
     else
     {
+      if (NULL == dsClientIface)
+      {
+          LOC_LOGE("%s:%d]: dsClientIface == NULL",
+                   __func__, __LINE__);
+      }
+      else
+      {
+          LOC_LOGE("%s:%d]: dsClientIface->pfn_init == NULL",
+                   __func__, __LINE__);
+      }
       ret = 2;
     }
     LOC_LOGD("%s:%d]: ret = %d\n", __func__, __LINE__,ret);
