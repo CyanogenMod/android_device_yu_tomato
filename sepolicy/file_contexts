@@ -1,4 +1,5 @@
 /sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl  u:object_r:touchpanel_sysfs:s0
+/sys/devices/virtual/touchscreen/touchscreen_dev/mode          u:object_r:touchpanel_sysfs:s0
 /sys/devices/soc.0/78b9000.i2c/i2c-5/5-005d/keypad_enable      u:object_r:touchpanel_sysfs:s0
 
 # Yulong interfaces
