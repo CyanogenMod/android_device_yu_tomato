@@ -18,4 +18,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
   <string name="touchscreen_camera_gesture_title">Fotoaparát</string>
+  <string name="touchscreen_camera_gesture_summary">Gestem „C“ spustit fotoaparát</string>
+  <string name="touchscreen_flashlight_gesture_title">Svítilna</string>
+  <string name="touchscreen_flashlight_gesture_summary">Gestem „O“ rozsvítit/zhasnout svítilnu</string>
+  <string name="touchscreen_music_gesture_title">Hudba</string>
+  <string name="touchscreen_music_gesture_summary">Použít gesta pro ovládání přehrávání hudby\n
+    • přejetím dolů přehrávat/pozastavit\n
+    • přejetím doleva pro předchozí skladbu\n
+    • přejetím doprava pro další skladbu</string>
 </resources>
