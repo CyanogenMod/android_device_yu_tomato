@@ -24,4 +24,6 @@ LOCAL_PACKAGE_NAME := ConfigPanel
 LOCAL_STATIC_JAVA_LIBRARIES := \
     org.cyanogenmod.platform.internal
 
+LOCAL_AAPT_FLAGS := --auto-add-overlay
+
 include $(BUILD_PACKAGE)
