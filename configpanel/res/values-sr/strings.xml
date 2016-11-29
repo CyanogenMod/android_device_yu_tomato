@@ -20,5 +20,10 @@
   <string name="touchscreen_camera_gesture_title">Камера</string>
   <string name="touchscreen_camera_gesture_summary">Нацртај \"C\" да би активирао камеру</string>
   <string name="touchscreen_flashlight_gesture_title">Лампа</string>
+  <string name="touchscreen_flashlight_gesture_summary">Нацртај круг да покренеш лампу</string>
   <string name="touchscreen_music_gesture_title">Музика</string>
+  <string name="touchscreen_music_gesture_summary">Користи гестове за контролу пуштања музике \n
+• Повуци доле за пуштање/паузу\n     
+• Повуци лево за претходну нумеру\n     
+• Повуци десно за следећу нумеру</string>
 </resources>

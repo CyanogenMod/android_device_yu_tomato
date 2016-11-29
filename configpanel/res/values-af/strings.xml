@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Kamera</string>
+  <string name="touchscreen_camera_gesture_summary">Teken \'n \"C\" om Kamera te aktiveer</string>
+  <string name="touchscreen_flashlight_gesture_title">Flitslig</string>
+  <string name="touchscreen_flashlight_gesture_summary">Teken \'n sirkel om flitslig aan-af te skakel</string>
+  <string name="touchscreen_music_gesture_title">Musiek</string>
+  <string name="touchscreen_music_gesture_summary">Gebruik gebare om musiek te speel \n
+    • Vee af om te speel/pouse\n
+    • Vee links vir vorige snit\n
+    • Vee regs vir volgende snit</string>
 </resources>
