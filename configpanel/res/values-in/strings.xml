@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Kamera</string>
+  <string name="touchscreen_camera_gesture_summary">Gambar \'C\' untuk mengaktifkan kamera</string>
+  <string name="touchscreen_flashlight_gesture_title">Senter</string>
+  <string name="touchscreen_flashlight_gesture_summary">Gambar sebuah lingkaran untuk beralih lampu senter</string>
+  <string name="touchscreen_music_gesture_title">Musik</string>
+  <string name="touchscreen_music_gesture_summary">Gunakan gerakan untuk mengontrol pemutaran musik \n
+    • Usap ke bawah untuk memulai/menjeda\n
+    • Usap ke kiri untuk trek sebelumnya\n
+    • Usap ke kanan untuk trek selanjutnya</string>
 </resources>
