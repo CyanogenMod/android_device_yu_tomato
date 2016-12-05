@@ -16,12 +16,14 @@
 
 #define LOG_TAG "jni_proximityCalibrate"
 
+#include <errno.h>
 #include <fcntl.h>
 #include <jni.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 
 #include <cutils/log.h>

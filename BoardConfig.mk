@@ -61,7 +61,7 @@ TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
 TARGET_NO_RPC := true
 
 # init
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_tomato.c
+TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_tomato.cpp
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -84,15 +84,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    bluetooth_loader.te \
-    file.te \
-    file_contexts \
-    system_app.te \
-    system_server.te \
-    system.te \
-    wcnss_service.te
 
 # Wifi
 TARGET_PROVIDES_WCNSS_QMI := true
