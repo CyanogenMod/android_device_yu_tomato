@@ -17,4 +17,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">Fotoaparát</string>
+  <string name="touchscreen_camera_gesture_summary">Gestom \"C\" spustite fotoaparát</string>
+  <string name="touchscreen_flashlight_gesture_title">Baterka</string>
+  <string name="touchscreen_flashlight_gesture_summary">Gestom \"O\" zapnite baterku</string>
+  <string name="touchscreen_music_gesture_title">Hudba</string>
+  <string name="touchscreen_music_gesture_summary">Použiť gestá pre ovládanie prehrávania hudby\n •  prejdením nadol 
+prehrávať/pozastaviť\n • prejdením doľava pre predošlú skladbu\n • prejdením 
+doprava pre daľšiu skladbu</string>
 </resources>
