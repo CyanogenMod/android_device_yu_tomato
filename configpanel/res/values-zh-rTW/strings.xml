@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Gesture shortcuts -->
+  <string name="touchscreen_camera_gesture_title">相機</string>
+  <string name="touchscreen_camera_gesture_summary">繪製一個「C」即可啟動相機</string>
+  <string name="touchscreen_flashlight_gesture_title">閃光燈</string>
+  <string name="touchscreen_flashlight_gesture_summary">繪製一個圓圈即可切換至手電筒</string>
+  <string name="touchscreen_music_gesture_title">音樂</string>
+  <string name="touchscreen_music_gesture_summary">使用手勢控制音樂播放 \n
+    • 兩根手指垂直滑動來播放或暫停\n
+    • 向左滑動切換至上一首\n
+    • 向右滑動切換至下一首</string>
 </resources>
