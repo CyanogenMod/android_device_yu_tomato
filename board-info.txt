@@ -1,1 +1,2 @@
 require version-trustzone=TZ.BF.3.0.R2-00034
+require version-baseband=MPSS.DPM.1.0.2.c1-00096-M8939FAAAANVZM-1
