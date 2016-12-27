@@ -14,3 +14,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/data/qmi_config.xml:system/etc/data/qmi_config.xml \
     $(LOCAL_PATH)/configs/data/dsi_config.xml:system/etc/data/dsi_config.xml
 endif
+
+# Telephony-ext
+PRODUCT_PACKAGES += telephony-ext ims-ext-common
+PRODUCT_BOOT_JARS += telephony-ext
+
+# IMS
+PRODUCT_PACKAGES += \
+    ims \
+    imscmlibrary \
+    imssettings \
+    init.qti.ims.sh
+ 
+ PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ims/imscm.xml:system/etc/permissions/imscm.xml \
+    $(LOCAL_PATH)/configs/ims/ims.xml:system/etc/permissions/ims.xml \
+    $(LOCAL_PATH)/configs/ims/qti_permissions.xml:system/etc/permissions/qti_permissions.xml
